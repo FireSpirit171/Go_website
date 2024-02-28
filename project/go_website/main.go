@@ -128,7 +128,6 @@ func show_review(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			panic(err)
 		}
-
 		showFilm = film //Нашли нужный фильм
 	}
 
