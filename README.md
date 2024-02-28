@@ -1,7 +1,7 @@
 # Go_website
 The first Go website for movie review
 
-# Название Вашего Вебсайта
+# Обоzреватель - Обзоры фильмов
 
 Главная страница сайта
 ![Главная страница 1](project/go_website/images/readme_1.png)
