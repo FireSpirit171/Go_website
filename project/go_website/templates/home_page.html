@@ -1,0 +1,36 @@
+{{ define "home_page"}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Обоzреватель - Обзоры фильмов</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Обзоры фильмов</h1>
+        <a href="/new_review/">Добавить обзор</a>
+    </header>
+
+    <div class="movies">
+        {{range $index, $film := .}}
+            <div class="movie">
+                <a href="/review/{{.Id}}">
+                    <img src="{{.Photo}}" alt="{{.Name}}">
+                </a>
+                <h3>{{.Name}}</h3>
+            </div>
+        {{end}}
+    </div>
+  
+    <footer>
+        <p>&copy; 2023 Обзоры фильмов</p>
+    </footer>
+    </body>
+    
+</html>
+
+{{ end }}

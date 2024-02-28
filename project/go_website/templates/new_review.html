@@ -1,0 +1,38 @@
+{{ define "new_review" }}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Новый обзор</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Обзоры фильмов</h1>
+    </header>
+    <main>
+        <h1>Новый обзор</h1>
+        <form action="/save_new_review/" method="post", enctype="multipart/form-data">
+            <label for="filmName">Название фильма:</label><br>
+            <input type="text" id="filmName" name="filmName" required><br><br>
+
+            <label for="plot">Напишите рецензию:</label><br>
+            <textarea id="plot" name="plot" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="posterLink">Ссылка на постер фильма:</label><br>
+            <input type="file" id="posterLink" name="posterLink" required><br><br>
+
+            <input type="submit" value="Добавить обзор">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Обзоры фильмов</p>
+    </footer>
+</body>
+    
+</html>
+
+{{ end }}

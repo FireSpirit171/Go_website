@@ -1,0 +1,43 @@
+{{ define "review"}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Name}}</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Обзоры фильмов</h1>
+        <a href="/">На главную</a>
+    </header>
+
+    <div class="film-container">
+        <div class="film-details">
+            <h1>{{.Name}}</h1>
+            <p>{{.Plot}}</p>
+        </div>
+        <div class="film-poster">
+            <img src="../{{.Photo}}" alt="{{.Name}}">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Обзоры фильмов</p>
+    </footer>
+</body>
+
+</html>
+
+{{ end }}
